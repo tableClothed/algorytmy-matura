@@ -65,13 +65,66 @@ void Osemkowy(int liczba) {
 
 }
 
+void Pierwsza(int liczba) {
+	bool pierwsza = true;
+	for (int i = 2; i < liczba; i++) {
+		if (liczba % i == 0) {
+			pierwsza = false;
+			break;
+		}
+
+	}
+
+	if (pierwsza) {
+		cout << "Liczba jest pierwsza.";
+
+	}
+	else
+	{
+		cout << "Liczba nie jest pierwsza";
+	}
+}
+
+void Doskonala(int liczba) {
+	int doskonala = 0;
+	for (int i = 1; i < liczba; i++) {
+		if (liczba % i == 0) {
+			doskonala += i;
+		}
+	}
+
+	if (doskonala == liczba) {
+		cout << "Liczba jest doskonala";
+	}
+	else {
+		cout << "Liczba nie jest doskonala";
+	}
+}
+
+void Rozklad_czynniki(int liczba) {
+	cout << "Liczba " << liczba << endl;
+	int i = 2;
+	while (liczba > 1) {
+		if (liczba % i == 0) {
+			cout << i << "*";
+			liczba /= i;
+			i = 1;
+		}
+		i++;
+	}
+
+}
+
 
 int main()
 {
 
 	//Anagramy("asddsa");
 	//Dwojkowy(20);
-	Osemkowy(8);
+	//Osemkowy(8);
+	//Pierwsza(7);
+	//Doskonala(12);
+	Rozklad_czynniki(1234);
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
