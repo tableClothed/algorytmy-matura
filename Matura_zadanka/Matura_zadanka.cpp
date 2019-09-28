@@ -115,6 +115,26 @@ void Rozklad_czynniki(int liczba) {
 
 }
 
+void Fibonacci(int liczba) {
+	int a = 0;
+	int b = 1;
+	for (int i = 0; i < liczba; i++) {
+		cout << b << ", ";
+		b += a;
+		a = b-a;
+	}
+	
+}
+
+int Rekurencyjna_Fibonacci(int liczba) {
+	if (liczba < 3) {
+		return 1;
+	}
+	else {
+		return Rekurencyjna_Fibonacci(liczba-1) + Rekurencyjna_Fibonacci(liczba - 2);
+	}
+}
+
 
 int main()
 {
@@ -124,7 +144,9 @@ int main()
 	//Osemkowy(8);
 	//Pierwsza(7);
 	//Doskonala(12);
-	Rozklad_czynniki(1234);
+	//Rozklad_czynniki(1234);
+	Fibonacci(13);
+	cout << Rekurencyjna_Fibonacci(13);
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
