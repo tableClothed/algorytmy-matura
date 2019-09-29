@@ -135,6 +135,50 @@ int Rekurencyjna_Fibonacci(int liczba) {
 	}
 }
 
+void Euklides(int a, int b) {
+	int wieksza = a < b ? b : a;
+	int mniejsza = a < b ? a : b;
+	if ((wieksza % mniejsza == 0) || (wieksza == mniejsza)) {
+		cout << mniejsza;
+	}
+	else {
+		while (wieksza != mniejsza) {
+			if (wieksza > mniejsza) {
+				wieksza -= mniejsza;
+			}
+			else {
+				mniejsza -= wieksza;
+			}
+			
+		}
+		cout << wieksza;
+
+	}
+}
+
+int Euklides_Rekurencja(int a, int b) {
+	if (a != b) {
+		if (a > b) {
+			return Euklides_Rekurencja(a - b, b);
+		}
+		else {
+			return Euklides_Rekurencja(a, b - a);
+		}
+	}
+	
+}
+
+void Najwiekszy_Najmniejszy(int tablica[]) {
+	int najmniejszy = 99999;
+	int najwiekszy = -99999;
+	for (int i = 0; i < 9; i++) {
+		if (tablica[i] < najmniejszy) najmniejszy = tablica[i];
+		if (tablica[i] > najwiekszy) najwiekszy = tablica[i];
+	}
+
+	cout << "Najwiekszy " << najwiekszy << ", najmniejszy " << najmniejszy;
+}
+
 
 int main()
 {
@@ -145,17 +189,10 @@ int main()
 	//Pierwsza(7);
 	//Doskonala(12);
 	//Rozklad_czynniki(1234);
-	Fibonacci(13);
-	cout << Rekurencyjna_Fibonacci(13);
+	//Fibonacci(13);
+	//cout << Rekurencyjna_Fibonacci(13);
+	//Euklides(24, 2341);
+	//cout << Euklides_Rekurencja(920, 920);
+	//int tablica[] = { 5, 6, 2, 23, 1, 0, -3, -5, 0}; Najwiekszy_Najmniejszy(tablica);
+	
 }
-
-// Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
-// Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
-
-// Porady dotyczące rozpoczynania pracy:
-//   1. Użyj okna Eksploratora rozwiązań, aby dodać pliki i zarządzać nimi
-//   2. Użyj okna programu Team Explorer, aby nawiązać połączenie z kontrolą źródła
-//   3. Użyj okna Dane wyjściowe, aby sprawdzić dane wyjściowe kompilacji i inne komunikaty
-//   4. Użyj okna Lista błędów, aby zobaczyć błędy
-//   5. Wybierz pozycję Projekt > Dodaj nowy element, aby utworzyć nowe pliki kodu, lub wybierz pozycję Projekt > Dodaj istniejący element, aby dodać istniejące pliku kodu do projektu
-//   6. Aby w przyszłości ponownie otworzyć ten projekt, przejdź do pozycji Plik > Otwórz > Projekt i wybierz plik sln
