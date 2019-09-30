@@ -180,6 +180,39 @@ void Najwiekszy_Najmniejszy(int tablica[]) {
 }
 
 
+void Wyswietl_tablice(int tablica[], int wielkosc) {
+	for (int i = 0; i < wielkosc; i++) {
+		cout << i << " " << tablica[i] << endl;
+	}
+}
+
+void Sortowanie_Babelkowe() {
+	int tablica[] = { 1, 44, 23, 100, 0, -5, 9 };
+
+	Wyswietl_tablice(tablica, 7);
+
+	int a = 7;
+
+	while (a > 0) {
+		for (int i = 1; i < 7; i++) {
+			if (tablica[i - 1] > tablica[i]) {
+				int temp = tablica[i];
+				tablica[i] = tablica[i - 1];
+				tablica[i - 1] = temp;
+			}
+
+		}
+		a--;
+	}
+	
+
+	Wyswietl_tablice(tablica, 7);
+
+
+}
+
+
+
 int main()
 {
 
@@ -194,5 +227,6 @@ int main()
 	//Euklides(24, 2341);
 	//cout << Euklides_Rekurencja(920, 920);
 	//int tablica[] = { 5, 6, 2, 23, 1, 0, -3, -5, 0}; Najwiekszy_Najmniejszy(tablica);
+	Sortowanie_Babelkowe();
 	
 }
