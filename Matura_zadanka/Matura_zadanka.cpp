@@ -402,7 +402,6 @@ void Liczba_Progow() {
 
 }
 
-
 void Najwieksza_Liczba_Progow() {
 	//int tablica[] = { 2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7 };
 	int tablica[] = { 20, 19, 18, 17, 16, 15, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
@@ -434,11 +433,38 @@ void Najwieksza_Liczba_Progow() {
 
 }
 
+void Skojarzone() {
+	int a, suma1 = 0, suma2 = 0, liczba_skojarzona;
+	cout << "Podaj x ";
+	cin >> a;
+
+	for (int i = 1; i <= a / 2; i++) {
+		if (a % i == 0) {
+			suma1 += i;
+		}
+	}
+
+	liczba_skojarzona = suma1 - 1;
+
+	for (int j = 1; j <= liczba_skojarzona / 2; j++) {
+		if (liczba_skojarzona % j == 0) {
+			suma2 += j;
+		}
+	}
+
+	if (suma2 - 1 == a) {
+		cout << endl << "Liczba jest skojarzona";
+	}
+	else {
+		cout << endl << "NIE";
+	}
+}
 
 
 
-int main()
-{
+
+//int main()
+//{
 
 	//Anagramy("asddsa");
 	//Dwojkowy(20);
@@ -458,5 +484,6 @@ int main()
 	//Sort_Scal();
 	//Quick_Sort();
 	//Liczba_Progow();
-	Najwieksza_Liczba_Progow();
-}
+	//Najwieksza_Liczba_Progow();
+	//Skojarzone();
+//}
