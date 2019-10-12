@@ -163,6 +163,8 @@ int main()
 {
 	//Odkoduj();
 	//Najdluzsza_linijka();
-	Odleglosc_liter();
+	//Odleglosc_liter();
 	//Odl();
+
+	return 0;
 }

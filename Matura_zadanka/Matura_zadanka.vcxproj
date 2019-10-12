@@ -155,6 +155,7 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\Desktop\matura inf\matura_2017\matura_2017\matura_2017\matura_2017.cpp" />
     <ClCompile Include="matura2018.cpp" />
     <ClCompile Include="Matura_zadanka.cpp" />
     <ClCompile Include="pch.cpp">
