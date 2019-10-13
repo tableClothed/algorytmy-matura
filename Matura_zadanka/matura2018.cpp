@@ -98,7 +98,6 @@ void Odleglosc_liter() {
 	plik.close();
 }
 
-
 void Odl() {
 	string linijka = "ABEZA";
 	int suma = 0;
@@ -125,7 +124,6 @@ void Odl() {
 	}
 
 }
-
 
 void Najdluzsza_linijka() {
 	fstream plik;
@@ -158,6 +156,55 @@ void Najdluzsza_linijka() {
 
 }
 
+void Wyswietl_tablice(int tabX[], int tabY[], int n) {
+	for (int i = 0; i < n; i++) {
+		cout << tabX[i] << " " << tabY[i] << endl;
+	}
+}
+
+void Szczyty() {
+	const int n = 5;
+	int X[5] = {-3, 1, 2, 3, -2};
+	int Y[5] = {3, 3, 1, 4, 2};
+
+	int x = X[1], y = Y[1];
+
+	for (int i = 0; i < n; i++) {
+		if (X[i] / Y[i] <= x / y) {
+			x = X[i];
+			y = Y[i];
+		}
+	}
+
+	cout << "Szczyt najbardziej na lewo to ma wspolrzedne " << x << ", " << y << endl;
+
+
+}
+
+void Posegreguj() {
+	const int n = 5;
+	int X[5] = { -3, 1, 2, 3, -2 };
+	int Y[5] = { 3, 3, 1, 4, 2 };
+
+	for (int i = 0; i < n; i++) {
+				int x = X[i], y = Y[i];
+		for (int j = i + 1; j < n; j++) {
+			int x = X[i], y = Y[i];
+
+			if ((X[j] / Y[j] <= X[i] / Y[i]) && (X[j] < X[i])) {
+
+				X[i] = X[j]; Y[i] = Y[j];
+
+				X[j] = x; Y[j] = y;
+			}
+		}
+	}
+
+	Wyswietl_tablice(X, Y, n);
+
+	
+}
+
 
 int main()
 {
@@ -165,6 +212,8 @@ int main()
 	//Najdluzsza_linijka();
 	//Odleglosc_liter();
 	//Odl();
+	//Szczyty();
+	Posegreguj();
 
 	return 0;
 }
