@@ -206,14 +206,14 @@ void Posegreguj() {
 }
 
 
-int main()
-{
+//int main()
+//{
 	//Odkoduj();
 	//Najdluzsza_linijka();
 	//Odleglosc_liter();
 	//Odl();
 	//Szczyty();
-	Posegreguj();
+	//Posegreguj();
 
-	return 0;
-}
+	//return 0;
+//}
