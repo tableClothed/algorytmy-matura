@@ -35,5 +35,8 @@
     <ClCompile Include="..\..\..\..\Desktop\matura inf\matura_2017\matura_2017\matura_2017\matura_2017.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="matura_2016.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
