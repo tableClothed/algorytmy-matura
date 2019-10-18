@@ -120,10 +120,143 @@ void Zapisz_PI() {
 	plik.close();
 }
 
+string Szyfruj(string linijka, int klucz) {
+	string szyfr = "";
+	char x = '0';
+	int wartosc_x = 0;
+
+	int alfabet_przedzial = ((int)'Z' - (int)'A')+1;
+	klucz = klucz % alfabet_przedzial;
+
+	for (int i = 0; i < linijka.length(); i++) {
+		x = linijka[i];
+		wartosc_x = (int)x;
+		wartosc_x += klucz;
+
+		if (wartosc_x > (int)'Z') {
+			wartosc_x -= alfabet_przedzial;
+		}
+
+		x = (char)wartosc_x;
+
+		szyfr += x;
+	}
+
+	return szyfr;
+}
+
+void Zad1() {
+	fstream plik;
+	string linijka = "";
+
+	plik.open("dane_6_1.txt");
+	if (plik.good()) {
+		while (!plik.eof()) {
+			plik >> linijka;
+			cout << Szyfruj(linijka, 107) << endl;
+		}
+	}
+	else {
+		cout << "Cos poszlo nie tak podcas otwierania pliku" << endl;
+	}
+}
+
+string Odszyfruj(string szyfr, int klucz) {
+	string linijka = "";
+	char x = '0';
+	int wartosc_x = 0;
+
+	int alfabet_przedzial = ((int)'Z' - (int)'A') + 1;
+	klucz = klucz % alfabet_przedzial;
+
+	for (int i = 0; i < szyfr.length(); i++) {
+		x = szyfr[i];
+		wartosc_x = (int)x;
+		wartosc_x -= klucz;
+
+		if (wartosc_x < (int)'A') {
+			wartosc_x += alfabet_przedzial;
+		}
+
+		x = (char)wartosc_x;
+
+		linijka += x;
+	}
+
+	return linijka;
+}
+
+void Zad2() {
+	fstream plik;
+	string linijka = "";
+	int klucz;
+
+	int i = 0;
+
+	plik.open("dane_6_2.txt");
+	if (plik.good()) {
+		//while (i < 1) {
+		while (i < 3000) {
+		//while (getline(plik, linijka)) {
+			plik >> linijka >> klucz;
+			if ((linijka == "") || (klucz == NULL)) {
+				i++;
+				continue;
+			}
+			cout << Odszyfruj(linijka, klucz) << endl;
+			i++;
+		}
+	}
+	else {
+		cout << "Cos poszlo nie tak podcas otwierania pliku" << endl;
+	}
+}
+
+int Szukaj_Klucza(string linijka, string szyfr) {
+	int klucz = (int)szyfr[0] - (int)linijka[0];
+
+	int przedzial_alfabet = ((int)'Z' - (int)'A') + 1;
+
+	if (klucz < 0) {
+		klucz = przedzial_alfabet + klucz;
+	}
+
+	return klucz;
+
+}
+
+void Zad3() {
+	fstream plik;
+	string linijka = "", szyfr = "";
+	int klucz;
+
+	int i = 0;
+
+	plik.open("dane_6_3.txt");
+	if (plik.good()) {
+		while (!plik.eof()) {
+			plik >> linijka >> szyfr;
+			klucz = Szukaj_Klucza(linijka, szyfr);
+
+			if (linijka != Odszyfruj(szyfr, klucz)) {
+				//cout << Odszyfruj(szyfr, klucz) << endl;
+				cout <<linijka << " " << szyfr << " " << klucz << endl;
+			}
+		}
+	}
+	else {
+		cout << "Cos poszlo nie tak podcas otwierania pliku" << endl;
+	}
+}
+
+
 int main() {
 	//Brzeg_Okregu();
 	//Punkty_Kola();
-	Zapisz_PI();
+	//Zapisz_PI();
+	//Zad1();
+	//Zad2();
+	Zad3();
 
 	return 0;
 }
