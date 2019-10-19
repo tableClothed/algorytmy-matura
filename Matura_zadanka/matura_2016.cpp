@@ -249,14 +249,42 @@ void Zad3() {
 	}
 }
 
+void Skojarzona() {
+	int a, dzielniki1 = 0, dzielniki2 = 0;
+	cout << "Podaj a: ";
+	cin >> a;
 
-int main() {
+	for (int i = 1; i <= a / 2; i++) {
+		if (a % i == 0) {
+			dzielniki1 += i;
+		}
+	}
+
+	int liczba = dzielniki1 - 1;
+
+	for (int i = 1; i < liczba / 2; i++) {
+		if (liczba % i == 0) {
+			dzielniki2 += i;
+		}
+	}
+
+	if (dzielniki2 - 1 == a) {
+		cout << "Liczba istnieje " << liczba << endl;
+	}
+	else {
+		cout << "nie istnieje" << endl;
+	}
+}
+
+
+//int main() {
 	//Brzeg_Okregu();
 	//Punkty_Kola();
 	//Zapisz_PI();
 	//Zad1();
 	//Zad2();
-	Zad3();
+	//Zad3();
+	//Skojarzona();
 
-	return 0;
-}
+	//return 0;
+//}
