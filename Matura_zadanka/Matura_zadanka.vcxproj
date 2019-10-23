@@ -156,9 +156,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Desktop\matura inf\matura_2017\matura_2017\matura_2017\matura_2017.cpp" />
-    <ClCompile Include="matura2018.cpp" />
+    <ClCompile Include="matura_2018.cpp" />
     <ClCompile Include="matura_2015.cpp" />
     <ClCompile Include="matura_2016.cpp" />
+    <ClCompile Include="matura_2019.cpp" />
     <ClCompile Include="Matura_zadanka.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

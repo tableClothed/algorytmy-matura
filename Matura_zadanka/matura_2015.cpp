@@ -153,9 +153,9 @@ void Binarnie3() {
 }
 
 
-int main() {
+//int main() {
 	//Binarne();
 	//Binarnie2();
-	Binarnie3();
-	return 0;
-}
+	//Binarnie3();
+	//return 0;
+//}

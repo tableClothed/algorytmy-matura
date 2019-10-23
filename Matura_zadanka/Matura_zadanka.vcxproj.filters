@@ -29,9 +29,6 @@
     <ClCompile Include="Matura_zadanka.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="matura2018.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\Desktop\matura inf\matura_2017\matura_2017\matura_2017\matura_2017.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
@@ -39,6 +36,12 @@
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="matura_2015.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="matura_2019.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="matura_2018.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
