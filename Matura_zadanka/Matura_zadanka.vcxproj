@@ -156,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Desktop\matura inf\matura_2017\matura_2017\matura_2017\matura_2017.cpp" />
+    <ClCompile Include="matura_2014.cpp" />
     <ClCompile Include="matura_2018.cpp" />
     <ClCompile Include="matura_2015.cpp" />
     <ClCompile Include="matura_2016.cpp" />

@@ -197,10 +197,10 @@ void Znajdz_max_kwadrat() {
 	cout << "Max pole: " << max_pole << endl;
 }
 
-int main() {
+//int main() {
 	//Szukaj_70();
 	//Takie_same_dzialki();
-	Znajdz_max_kwadrat();
+	//Znajdz_max_kwadrat();
 
-	return 0;
-}
+	//return 0;
+//}
