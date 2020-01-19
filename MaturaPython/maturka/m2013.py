@@ -62,14 +62,14 @@ def check_if_larger(x):
     return True
 
 
-file = open("dane.txt", "r")
+file = open("mat/dane.txt", "r")
 pd_a(file)
 file.close()
 
-file = open("dane.txt", "r")
+file = open("mat/dane.txt", "r")
 pd_b(file)
 file.close()
 
-file = open("dane.txt", "r")
+file = open("mat/dane.txt", "r")
 pd_c(file)
 file.close()
