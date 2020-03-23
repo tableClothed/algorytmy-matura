@@ -1,0 +1,10 @@
+Etykiety wierszy	Suma z 50002
+2014	1
+Kwarta³1	0
+Kwarta³2	0
+Kwarta³3	0
+Kwarta³4	1
+paŸ	0
+lis	0
+gru	1
+Suma koñcowa	1
